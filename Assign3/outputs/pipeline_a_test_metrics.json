@@ -1,0 +1,11 @@
+{
+  "stage": "Pipeline A",
+  "model_dir": "/home/apbasloe/CSCI555/outputs/pipeline_a_finetuned_best_model",
+  "num_examples": 6545,
+  "exact_match_accuracy": 0.0,
+  "codebleu": 0.06280486603758192,
+  "ngram_match_score": 0.01554901149421028,
+  "weighted_ngram_match_score": 0.029754688650928483,
+  "syntax_match_score": 0.040785427016796785,
+  "dataflow_match_score": 0.16513033698839216
+}
