@@ -1,0 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+transformers==4.46.0
+tokenizers==0.20.3
+sentencepiece==0.1.99
+datasets
+tqdm
+ipykernel
+codebleu==0.7.0
+tree-sitter-java==0.21.0
