@@ -1,0 +1,10 @@
+{
+  "stage": "Qwen zero-shot",
+  "num_examples": 6545,
+  "exact_match_accuracy": 0.0,
+  "codebleu": 0.3793233042057463,
+  "ngram_match_score": 0.03766994298453863,
+  "weighted_ngram_match_score": 0.06567710020207092,
+  "syntax_match_score": 0.6371658386562574,
+  "dataflow_match_score": 0.7767803349801181
+}

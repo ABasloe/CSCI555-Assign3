@@ -1,0 +1,10 @@
+{
+  "stage": "Qwen RAG 3-shot",
+  "num_examples": 6545,
+  "exact_match_accuracy": 0.005805958747135217,
+  "codebleu": 0.6767458728238382,
+  "ngram_match_score": 0.5459764696230244,
+  "weighted_ngram_match_score": 0.5735024688479785,
+  "syntax_match_score": 0.7549444050153773,
+  "dataflow_match_score": 0.8325601478089729
+}
