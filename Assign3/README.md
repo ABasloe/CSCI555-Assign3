@@ -14,7 +14,7 @@ assignment_pipelines_a_b_combined.ipynb
 
 ## Setup
 
-Use Python 3.10 with a virtual environment.
+Use Python 3.10 with a virtual environment. I did this one the lab machines in the isc as the GPUs were much faster. Originally I used the google colab CPUs but the virtual enviornment worked a lot better.
 
 ```bash
 python3.10 -m venv .venv
@@ -23,7 +23,17 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-`requirements.txt` installs CUDA PyTorch, HuggingFace Transformers/Datasets, SentencePiece, notebook kernel support, and CodeBLEU Java dependencies.
+`requirements.txt` installs:
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+transformers==4.46.0
+tokenizers==0.20.3
+sentencepiece==0.1.99
+datasets
+tqdm
+ipykernel
+codebleu==0.7.0
+tree-sitter-java==0.21.0
 
 ## How to Reproduce
 
@@ -45,7 +55,7 @@ The notebook is ordered as follows:
 8. Qwen zero-shot and Qwen 3-shot RAG evaluation.
 9. Final comparison table.
 
-The notebook reuses existing outputs by default. To force a stage to rerun, change the `FORCE_*` flags near the top of the notebook.
+The notebook reuses existing outputs by default. To force a stage to rerun, change the `FORCE_*` flags near the top of the notebook. The Pipeline evaluations are split seperately so you can know how well each one did but there is also a combined evaluation to show comparisons. 
 
 ## Output Locations
 
@@ -106,14 +116,3 @@ outputs/pipeline_a_training_log.csv
 outputs/pipeline_a_finetune_log.csv
 outputs/pipeline_b_finetune_log.csv
 ```
-
-## GitHub Submission Note
-
-Do not commit `.venv/`.
-
-The full `outputs/` folder can be very large. In this run it contains multi-hundred-MB model and optimizer checkpoint files, which exceed GitHub's normal 100 MB file limit. For GitHub, either:
-
-- Use Git LFS for model/checkpoint files, or
-- Commit the notebook, `requirements.txt`, README, small logs/metrics/predictions, and provide an external link for large model artifacts.
-
-The most important small files to include directly are the notebook, requirements file, README, metrics JSON files, training logs, and final report PDF.
